@@ -1,0 +1,11 @@
+C:\Users\Emmanuel\source\repos\Tic-Luck-Toe\Tic-Luck-Toe\bin\Debug\Tic-Luck-Toe.exe.config
+C:\Users\Emmanuel\source\repos\Tic-Luck-Toe\Tic-Luck-Toe\bin\Debug\Tic-Luck-Toe.exe
+C:\Users\Emmanuel\source\repos\Tic-Luck-Toe\Tic-Luck-Toe\bin\Debug\Tic-Luck-Toe.pdb
+C:\Users\Emmanuel\source\repos\Tic-Luck-Toe\Tic-Luck-Toe\bin\Debug\Tic-Luck-Toe.xml
+C:\Users\Emmanuel\source\repos\Tic-Luck-Toe\Tic-Luck-Toe\obj\Debug\Tic-Luck-Toe.vbprojAssemblyReference.cache
+C:\Users\Emmanuel\source\repos\Tic-Luck-Toe\Tic-Luck-Toe\obj\Debug\Tic_Luck_Toe.Resources.resources
+C:\Users\Emmanuel\source\repos\Tic-Luck-Toe\Tic-Luck-Toe\obj\Debug\Tic-Luck-Toe.vbproj.GenerateResource.cache
+C:\Users\Emmanuel\source\repos\Tic-Luck-Toe\Tic-Luck-Toe\obj\Debug\Tic-Luck-Toe.exe
+C:\Users\Emmanuel\source\repos\Tic-Luck-Toe\Tic-Luck-Toe\obj\Debug\Tic-Luck-Toe.xml
+C:\Users\Emmanuel\source\repos\Tic-Luck-Toe\Tic-Luck-Toe\obj\Debug\Tic-Luck-Toe.pdb
+C:\Users\Emmanuel\source\repos\Tic-Luck-Toe\Tic-Luck-Toe\obj\Debug\Tic_Luck_Toe.mainMenu.resources
