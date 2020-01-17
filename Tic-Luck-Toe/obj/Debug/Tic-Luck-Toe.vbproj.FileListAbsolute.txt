@@ -9,3 +9,4 @@ C:\Users\Emmanuel\source\repos\Tic-Luck-Toe\Tic-Luck-Toe\obj\Debug\Tic-Luck-Toe.
 C:\Users\Emmanuel\source\repos\Tic-Luck-Toe\Tic-Luck-Toe\obj\Debug\Tic-Luck-Toe.xml
 C:\Users\Emmanuel\source\repos\Tic-Luck-Toe\Tic-Luck-Toe\obj\Debug\Tic-Luck-Toe.pdb
 C:\Users\Emmanuel\source\repos\Tic-Luck-Toe\Tic-Luck-Toe\obj\Debug\Tic_Luck_Toe.mainMenu.resources
+C:\Users\Emmanuel\source\repos\Tic-Luck-Toe\Tic-Luck-Toe\obj\Debug\Tic_Luck_Toe.Form2.resources

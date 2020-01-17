@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class mainMenu
+Partial Class MainMenu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,6 +22,7 @@ Partial Class mainMenu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainMenu))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.playbutton = New System.Windows.Forms.Button()
         Me.lboardbutton = New System.Windows.Forms.Button()
@@ -78,23 +79,25 @@ Partial Class mainMenu
         Me.settingbutton.Text = "SETTINGS"
         Me.settingbutton.UseVisualStyleBackColor = False
         '
-        'mainMenu
+        'MainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(778, 945)
+        Me.ClientSize = New System.Drawing.Size(778, 944)
         Me.Controls.Add(Me.settingbutton)
         Me.Controls.Add(Me.lboardbutton)
         Me.Controls.Add(Me.playbutton)
         Me.Controls.Add(Me.Label1)
         Me.ForeColor = System.Drawing.Color.FromArgb(CType(CType(104, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(121, Byte), Integer))
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(800, 1001)
-        Me.MinimumSize = New System.Drawing.Size(800, 1001)
-        Me.Name = "mainMenu"
+        Me.MaximumSize = New System.Drawing.Size(800, 1000)
+        Me.MinimumSize = New System.Drawing.Size(800, 1000)
+        Me.Name = "MainMenu"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CpE Quiz Bee: Tic - Luck - Toe"
         Me.ResumeLayout(False)
         Me.PerformLayout()
