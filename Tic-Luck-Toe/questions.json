@@ -1,0 +1,76 @@
+{
+  "listQuestions": [
+    {
+      "question": "It is the default row height of a single cell in MS Excel 2013.",
+      "choices": [ "5", "10", "15", "20" ],
+      "correct": 2
+    },
+    {
+      "question": "What is the name of the company that owns Google?",
+      "choices": [ "Gogle, Inc.", "Google LLC", "Alphabet Inc.", "Microsoft" ],
+      "correct": 2
+    },
+    {
+      "question": "Which key can be used to view a slide show in MS Powerpoint?",
+      "choices": [ "F5", "F2", "F7", "F9" ],
+      "correct": 0
+    },
+    {
+      "question": "What tech company became America’s first trillion-dollar company?",
+      "choices": [ "Microsoft", "Google", "Apple", "Samsung" ],
+      "correct": 2
+    },
+    {
+      "question": "Who is known as the Father of Internet?",
+      "choices": [ "Tim Berners-Lee", "Vint Cerf", "Charles Babbage", "James Gosling" ],
+      "correct": 1
+    },
+    {
+      "question": "How much did the first handheld cell phone weigh?",
+      "choices": [ "2lb", "2kg", "0.8kg", "1.23lb" ],
+      "correct": 0
+    },
+    {
+      "question": "Which general-purpose high-level programming language was created by Guido van Rossum in the Netherlands?",
+      "choices": [ "C#", "Java", "C++", "Python" ],
+      "correct": 3
+    },
+    {
+      "question": "In MS Word, what picture layout option will give the photo its own line without any text on either side?",
+      "choices": [ "In Line with text", "Top and Bottom", "Through", "Square" ],
+      "correct": 1
+    },
+    {
+      "question": "In 1957, the first of the major languages appeared in the form of FORTRAN. What does FORTRAN stands for?",
+      "choices": [ "Formula Translation", "Formula Translating", "Formula Transfiguration", "Formula Transition" ],
+      "correct": 0
+    },
+    {
+      "question": "What is the capacity of a standard PC floppy?",
+      "choices": [ "1.2MB", "1.44KB", "1.44MB", "120MB" ],
+      "correct": 2
+    },
+    {
+      "question": "What frequency range is the High Frequency band?",
+      "choices": [ "100 kHz", "1GHz", "30 - 300 MHz", "3 - 30 MHz" ],
+      "correct": 3
+    },
+    {
+      "question": "McAfee, the internet security company, became a subsidiary of which of these in 2011?",
+      "choices": [ "Intel", "Microsoft", "Dell", "IBM" ],
+      "correct": 0
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+  ]
+}
