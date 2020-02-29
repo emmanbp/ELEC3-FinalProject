@@ -1,5 +1,80 @@
-﻿Public Class Form2
+﻿Imports System.IO
+Imports Newtonsoft.Json
+Imports Newtonsoft.Json.Linq
+
+Public Class Form2
     Inherits Windows.Forms.Form
+
+
+    'ADDED CODE
+    Private jsonString As String = File.ReadAllText("questions.json")
+    Private jsonObject As JObject = JObject.Parse(jsonString)
+    Private resQuestion As Integer
+    Private questionArray As JArray = JArray.Parse(jsonObject.SelectToken("listQuestions").ToString)
+    Private choiceArray As JArray
+    Private correct As Byte
+    Private selectedQuestion As Integer
+
+    Private Sub randomChoices()
+        Dim rndQuestion As New Random
+        selectedQuestion = rndQuestion.Next(0, questionArray.Count)
+
+        choiceArray = JArray.Parse(questionArray(selectedQuestion).SelectToken("choices").ToString)
+
+        Dim rndChoice As New Random
+        Dim usedChoices As New List(Of Integer)
+        Dim buttons() = {Button4, Button7, Button8, Button9}
+
+        For i As Integer = 0 To buttons.Length - 1
+            Dim uniqueChoices As Boolean = False
+
+            Do
+                Dim resChoice = rndChoice.Next(0, choiceArray.Count)
+                Dim strChoice As String = choiceArray(resChoice).ToString
+
+                If usedChoices.Contains(resChoice) Then
+                    uniqueChoices = False
+                Else
+                    uniqueChoices = True
+                    usedChoices.Add(resChoice)
+                    buttons(usedChoices(i)).Text = strChoice
+
+                End If
+            Loop Until uniqueChoices
+
+        Next
+
+        Dim boxes() = {box1, box2, box3, box4, box5, box6, box7, box8, box9,
+                Button4, Button7, Button8, Button9}
+        For i As Integer = 0 To boxes.Length - 1
+            boxes(i).Enabled = True
+        Next
+
+
+        TextBox1.Text = questionArray(selectedQuestion).SelectToken("question").ToString
+
+    End Sub
+
+    Private Sub checkAnswer(ByVal btnStr As String)
+        choiceArray = JArray.Parse(questionArray(selectedQuestion).SelectToken("choices").ToString)
+        correct = Byte.Parse(questionArray(selectedQuestion).SelectToken("correct"))
+
+        If choiceArray(correct) <> btnStr Then
+            TextBox2.Text = "Oops! Your answer is incorrect"
+
+            Dim boxes() = {box1, box2, box3, box4, box5, box6, box7, box8, box9,
+                Button4, Button7, Button8, Button9}
+            For i As Integer = 0 To boxes.Length - 1
+                boxes(i).Enabled = False
+            Next
+
+        Else
+            TextBox2.Text = " Your answer is correct"
+        End If
+
+    End Sub
+
+
     Private Sub DrawFormGradient(ByVal TopColor As Color, ByVal BottomColor As Color)
         Dim objBrush As New Drawing2D.LinearGradientBrush(Me.DisplayRectangle, TopColor, BottomColor, Drawing2D.LinearGradientMode.Horizontal)
         Dim objGraphics As Graphics = Me.CreateGraphics
@@ -12,6 +87,12 @@
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'ADDED CODE
+        TextBox2.Text = ""
+        randomChoices()
+
+
+
         For Each c As Control In Panel2.Controls
             If c.GetType() = GetType(Button) Then
                 AddHandler c.Click, AddressOf btn_click
@@ -126,5 +207,32 @@
                 c.Text = ""
             End If
         Next
+    End Sub
+
+    'ADDED CODE
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        checkAnswer(Button4.Text)
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        checkAnswer(Button7.Text)
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        checkAnswer(Button8.Text)
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        checkAnswer(Button9.Text)
+    End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+
+        randomChoices()
+    End Sub
+
+    Private Sub box1_Click(sender As Object, e As EventArgs) Handles box1.Click
+
     End Sub
 End Class
