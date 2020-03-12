@@ -44,7 +44,6 @@ Partial Class Form2
         Me.box1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.playerturn = New System.Windows.Forms.Label()
         Me.playbutton = New System.Windows.Forms.Button()
@@ -64,18 +63,18 @@ Partial Class Form2
         Me.Panel1.Controls.Add(Me.Button7)
         Me.Panel1.Controls.Add(Me.Button4)
         Me.Panel1.Controls.Add(Me.TextBox1)
-        Me.Panel1.Location = New System.Drawing.Point(22, 60)
+        Me.Panel1.Location = New System.Drawing.Point(62, 104)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(267, 260)
+        Me.Panel1.Size = New System.Drawing.Size(418, 260)
         Me.Panel1.TabIndex = 0
         '
         'Button9
         '
         Me.Button9.FlatAppearance.BorderSize = 0
-        Me.Button9.Location = New System.Drawing.Point(136, 198)
+        Me.Button9.Location = New System.Drawing.Point(220, 198)
         Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(115, 45)
+        Me.Button9.Size = New System.Drawing.Size(180, 45)
         Me.Button9.TabIndex = 4
         Me.Button9.UseVisualStyleBackColor = True
         '
@@ -84,16 +83,16 @@ Partial Class Form2
         Me.Button8.FlatAppearance.BorderSize = 0
         Me.Button8.Location = New System.Drawing.Point(15, 199)
         Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(115, 45)
+        Me.Button8.Size = New System.Drawing.Size(180, 45)
         Me.Button8.TabIndex = 3
         Me.Button8.UseVisualStyleBackColor = True
         '
         'Button7
         '
         Me.Button7.FlatAppearance.BorderSize = 0
-        Me.Button7.Location = New System.Drawing.Point(136, 142)
+        Me.Button7.Location = New System.Drawing.Point(220, 142)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(115, 45)
+        Me.Button7.Size = New System.Drawing.Size(180, 45)
         Me.Button7.TabIndex = 2
         Me.Button7.UseVisualStyleBackColor = True
         '
@@ -102,7 +101,7 @@ Partial Class Form2
         Me.Button4.FlatAppearance.BorderSize = 0
         Me.Button4.Location = New System.Drawing.Point(15, 142)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(115, 45)
+        Me.Button4.Size = New System.Drawing.Size(180, 45)
         Me.Button4.TabIndex = 1
         Me.Button4.UseVisualStyleBackColor = True
         '
@@ -118,7 +117,7 @@ Partial Class Form2
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(236, 109)
+        Me.TextBox1.Size = New System.Drawing.Size(385, 109)
         Me.TextBox1.TabIndex = 0
         Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -140,7 +139,7 @@ Partial Class Form2
         Me.Panel2.Controls.Add(Me.box1)
         Me.Panel2.Controls.Add(Me.Button2)
         Me.Panel2.Controls.Add(Me.Button1)
-        Me.Panel2.Location = New System.Drawing.Point(324, 60)
+        Me.Panel2.Location = New System.Drawing.Point(582, 104)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(267, 260)
@@ -290,25 +289,15 @@ Partial Class Form2
         Me.Button1.TabIndex = 0
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Panel3
-        '
-        Me.Panel3.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(171, Byte), Integer), CType(CType(108, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.Panel3.Location = New System.Drawing.Point(627, 60)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(267, 260)
-        Me.Panel3.TabIndex = 2
-        '
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(109, Byte), Integer))
         Me.Panel4.Controls.Add(Me.playerturn)
         Me.Panel4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Panel4.Location = New System.Drawing.Point(324, 8)
+        Me.Panel4.Location = New System.Drawing.Point(582, 30)
         Me.Panel4.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(267, 45)
+        Me.Panel4.Size = New System.Drawing.Size(267, 57)
         Me.Panel4.TabIndex = 3
         '
         'playerturn
@@ -327,7 +316,7 @@ Partial Class Form2
         Me.playbutton.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.playbutton.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.playbutton.ForeColor = System.Drawing.Color.Black
-        Me.playbutton.Location = New System.Drawing.Point(324, 324)
+        Me.playbutton.Location = New System.Drawing.Point(582, 377)
         Me.playbutton.Margin = New System.Windows.Forms.Padding(2)
         Me.playbutton.Name = "playbutton"
         Me.playbutton.Size = New System.Drawing.Size(267, 58)
@@ -341,11 +330,11 @@ Partial Class Form2
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox2.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(22, 334)
+        Me.TextBox2.Location = New System.Drawing.Point(62, 377)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(149, 48)
+        Me.TextBox2.Size = New System.Drawing.Size(220, 48)
         Me.TextBox2.TabIndex = 5
         Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -353,9 +342,9 @@ Partial Class Form2
         '
         Me.Button10.FlatAppearance.BorderSize = 0
         Me.Button10.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button10.Location = New System.Drawing.Point(177, 334)
+        Me.Button10.Location = New System.Drawing.Point(288, 377)
         Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(112, 48)
+        Me.Button10.Size = New System.Drawing.Size(192, 48)
         Me.Button10.TabIndex = 6
         Me.Button10.Text = "Next Question"
         Me.Button10.UseVisualStyleBackColor = True
@@ -365,19 +354,18 @@ Partial Class Form2
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(913, 430)
+        Me.ClientSize = New System.Drawing.Size(984, 461)
         Me.Controls.Add(Me.Button10)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.playbutton)
         Me.Controls.Add(Me.Panel4)
-        Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(939, 469)
+        Me.MaximumSize = New System.Drawing.Size(1500, 700)
         Me.MinimumSize = New System.Drawing.Size(915, 469)
         Me.Name = "Form2"
         Me.RightToLeftLayout = True
@@ -403,7 +391,6 @@ Partial Class Form2
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel4 As Panel
     Friend WithEvents playerturn As Label
     Friend WithEvents playbutton As Button
