@@ -8,14 +8,126 @@ Imports System.Text
 Imports System.Windows.Forms
 Imports System.Net.Sockets
 
+Imports System.IO
+Imports Newtonsoft.Json
+Imports Newtonsoft.Json.Linq
+
 Partial Public Class Game
     Inherits Form
+
+    ' !-Generate Question
+
+    Private jsonString As String = File.ReadAllText("questions.json")
+    Private jsonObject As JObject = JObject.Parse(jsonString)
+    Private resQuestion As Integer
+    Private questionArray As JArray = JArray.Parse(jsonObject.SelectToken("listQuestions").ToString)
+    Private choiceArray As JArray
+    Private correct As Byte
+    Private selectedQuestion As Integer
+
+    Private Sub randomChoices()
+        Dim rndQuestion As New Random
+        selectedQuestion = rndQuestion.Next(0, questionArray.Count)
+
+        choiceArray = JArray.Parse(questionArray(selectedQuestion).SelectToken("choices").ToString)
+
+        Dim rndChoice As New Random
+        Dim usedChoices As New List(Of Integer)
+        Dim buttons() = {Button4, Button7, Button8, Button9}
+
+        For i As Integer = 0 To buttons.Length - 1
+            Dim uniqueChoices As Boolean = False
+
+            Do
+                Dim resChoice = rndChoice.Next(0, choiceArray.Count)
+                Dim strChoice As String = choiceArray(resChoice).ToString
+
+                If usedChoices.Contains(resChoice) Then
+                    uniqueChoices = False
+                Else
+                    uniqueChoices = True
+                    usedChoices.Add(resChoice)
+                    buttons(usedChoices(i)).Text = strChoice
+
+                End If
+            Loop Until uniqueChoices
+
+        Next
+
+        Dim boxes() = {Button4, Button7, Button8, Button9}
+        For i As Integer = 0 To boxes.Length - 1
+            boxes(i).Enabled = True
+        Next
+
+
+        TextBox1.Text = questionArray(selectedQuestion).SelectToken("question").ToString
+
+    End Sub
+
+    Private Sub checkAnswer(ByVal btnStr As String)
+        choiceArray = JArray.Parse(questionArray(selectedQuestion).SelectToken("choices").ToString)
+        correct = Byte.Parse(questionArray(selectedQuestion).SelectToken("correct"))
+
+        If choiceArray(correct) <> btnStr Then
+            TextBox2.Text = "Oops! Your answer is incorrect"
+            DisableBoxes()
+
+            Dim boxes() = {Button4, Button7, Button8, Button9}
+            For i As Integer = 0 To boxes.Length - 1
+                boxes(i).Enabled = False
+
+            Next
+
+        Else
+            TextBox2.Text = " Your answer is correct"
+
+            If Not CheckState() Then EnableBoxes()
+
+
+            Dim boxes() = {Button4, Button7, Button8, Button9}
+            For i As Integer = 0 To boxes.Length - 1
+                boxes(i).Enabled = False
+
+            Next
+
+
+        End If
+
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        checkAnswer(Button4.Text)
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        checkAnswer(Button7.Text)
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        checkAnswer(Button8.Text)
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        checkAnswer(Button9.Text)
+    End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        TextBox2.Text = ""
+        DisableBoxes()
+        randomChoices()
+    End Sub
+
+    ' Generate Question-!
+
+    ' !-Game Code
+
+    Private isClickRestart As Boolean = False
 
     Public Sub New(ByVal isHost As Boolean, ByVal Optional ip As String = Nothing)
         InitializeComponent()
         AddHandler messageReceiver.DoWork, AddressOf messageReceiver_DoWork
-        'messageReceiver.DoWork += messageReceiver_DoWork()
         CheckForIllegalCrossThreadCalls = False
+
 
         If isHost Then
             PlayerChar = "X"
@@ -39,11 +151,15 @@ Partial Public Class Game
 
     Public Sub messageReceiver_DoWork(sender As Object, e As DoWorkEventArgs)
         If CheckState() Then Return
-        DisableBoxes()
-        playerTurnLabel.Text = "Opponent's Turn"
+        'DisableBoxes()
+
         ReceiveMove()
-        playerTurnLabel.Text = "Your Turn"
+
         If Not CheckState() Then EnableBoxes()
+
+        If isClickRestart = True Then
+            MessageBox.Show("Opponent Player has left. Restart the game")
+        End If
 
     End Sub
 
@@ -53,6 +169,7 @@ Partial Public Class Game
     Private messageReceiver As BackgroundWorker = New BackgroundWorker()
     Private server As TcpListener = Nothing
     Private client As TcpClient
+
 
     Private Function CheckState() As Boolean
         'horizontal
@@ -185,7 +302,7 @@ Partial Public Class Game
 
     Private Sub ReceiveMove()
         Dim buffer As Byte() = New Byte(0) {}
-        Sock.Receive(buffer)
+        sock.Receive(buffer)
 
         Dim boxes() As Button = {box1, box2, box3, box4, box5, box6, box7, box8, box9}
         Dim num As Integer = 1
@@ -194,15 +311,30 @@ Partial Public Class Game
             If buffer(0) = num Then boxes(i).Text = OpponentChar.ToString()
             num += 1
 
-            Console.WriteLine(num)
+
         Next
+
+    End Sub
+
+    ' Form components
+    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TextBox2.Text = ""
+        DisableBoxes()
+        randomChoices()
     End Sub
 
     Private Sub box1_Click(sender As Object, e As EventArgs) Handles box1.Click
+
+
         Dim num As Byte() = {1}
         sock.Send(num)
         box1.Text = PlayerChar.ToString()
         messageReceiver.RunWorkerAsync()
+        TextBox2.Text = ""
+        randomChoices()
+        DisableBoxes()
+
+
 
     End Sub
 
@@ -211,6 +343,10 @@ Partial Public Class Game
         sock.Send(num)
         box2.Text = PlayerChar.ToString()
         messageReceiver.RunWorkerAsync()
+        TextBox2.Text = ""
+        randomChoices()
+        DisableBoxes()
+
     End Sub
 
     Private Sub box3_Click(sender As Object, e As EventArgs) Handles box3.Click
@@ -218,6 +354,11 @@ Partial Public Class Game
         sock.Send(num)
         box3.Text = PlayerChar.ToString()
         messageReceiver.RunWorkerAsync()
+        TextBox2.Text = ""
+        randomChoices()
+        DisableBoxes()
+
+
     End Sub
 
     Private Sub box4_Click(sender As Object, e As EventArgs) Handles box4.Click
@@ -225,6 +366,11 @@ Partial Public Class Game
         sock.Send(num)
         box4.Text = PlayerChar.ToString()
         messageReceiver.RunWorkerAsync()
+        TextBox2.Text = ""
+        randomChoices()
+        DisableBoxes()
+
+
     End Sub
 
     Private Sub box5_Click(sender As Object, e As EventArgs) Handles box5.Click
@@ -232,6 +378,11 @@ Partial Public Class Game
         sock.Send(num)
         box5.Text = PlayerChar.ToString()
         messageReceiver.RunWorkerAsync()
+        TextBox2.Text = ""
+        randomChoices()
+        DisableBoxes()
+
+
     End Sub
 
     Private Sub box6_Click(sender As Object, e As EventArgs) Handles box6.Click
@@ -239,6 +390,11 @@ Partial Public Class Game
         sock.Send(num)
         box6.Text = PlayerChar.ToString()
         messageReceiver.RunWorkerAsync()
+        TextBox2.Text = ""
+        randomChoices()
+        DisableBoxes()
+
+
     End Sub
 
     Private Sub box7_Click(sender As Object, e As EventArgs) Handles box7.Click
@@ -246,6 +402,11 @@ Partial Public Class Game
         sock.Send(num)
         box7.Text = PlayerChar.ToString()
         messageReceiver.RunWorkerAsync()
+        TextBox2.Text = ""
+        randomChoices()
+        DisableBoxes()
+
+
     End Sub
 
     Private Sub box8_Click(sender As Object, e As EventArgs) Handles box8.Click
@@ -253,6 +414,11 @@ Partial Public Class Game
         sock.Send(num)
         box8.Text = PlayerChar.ToString()
         messageReceiver.RunWorkerAsync()
+        TextBox2.Text = ""
+        randomChoices()
+        DisableBoxes()
+
+
     End Sub
 
     Private Sub box9_Click(sender As Object, e As EventArgs) Handles box9.Click
@@ -260,6 +426,11 @@ Partial Public Class Game
         sock.Send(num)
         box9.Text = PlayerChar.ToString()
         messageReceiver.RunWorkerAsync()
+        TextBox2.Text = ""
+        randomChoices()
+        DisableBoxes()
+
+
     End Sub
 
     Private Sub Game_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
@@ -269,4 +440,11 @@ Partial Public Class Game
 
     End Sub
 
+    Private Sub restartBtn_Click(sender As Object, e As EventArgs) Handles restartBtn.Click
+        isClickRestart = True
+        Me.Close()
+        ConnectForm.Show()
+    End Sub
+
+    ' Game Code-!
 End Class

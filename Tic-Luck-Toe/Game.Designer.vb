@@ -31,7 +31,6 @@ Partial Class Game
         Me.box7 = New System.Windows.Forms.Button()
         Me.box8 = New System.Windows.Forms.Button()
         Me.box9 = New System.Windows.Forms.Button()
-        Me.playerTurnLabel = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
@@ -40,8 +39,9 @@ Partial Class Game
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Button10 = New System.Windows.Forms.Button()
-        Me.messageTxt = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.restartBtn = New System.Windows.Forms.Button()
+        Me.messageTxt = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -49,6 +49,7 @@ Partial Class Game
         'box1
         '
         Me.box1.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.box1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.box1.Font = New System.Drawing.Font("Segoe UI", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.box1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.box1.Location = New System.Drawing.Point(19, 17)
@@ -60,6 +61,7 @@ Partial Class Game
         'box2
         '
         Me.box2.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.box2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.box2.Font = New System.Drawing.Font("Segoe UI", 30.0!)
         Me.box2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.box2.Location = New System.Drawing.Point(136, 17)
@@ -71,6 +73,7 @@ Partial Class Game
         'box3
         '
         Me.box3.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.box3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.box3.Font = New System.Drawing.Font("Segoe UI", 30.0!)
         Me.box3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.box3.Location = New System.Drawing.Point(255, 17)
@@ -82,6 +85,7 @@ Partial Class Game
         'box4
         '
         Me.box4.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.box4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.box4.Font = New System.Drawing.Font("Segoe UI", 30.0!)
         Me.box4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.box4.Location = New System.Drawing.Point(19, 96)
@@ -93,6 +97,7 @@ Partial Class Game
         'box5
         '
         Me.box5.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.box5.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.box5.Font = New System.Drawing.Font("Segoe UI", 30.0!)
         Me.box5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.box5.Location = New System.Drawing.Point(136, 96)
@@ -104,6 +109,7 @@ Partial Class Game
         'box6
         '
         Me.box6.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.box6.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.box6.Font = New System.Drawing.Font("Segoe UI", 30.0!)
         Me.box6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.box6.Location = New System.Drawing.Point(255, 96)
@@ -115,6 +121,7 @@ Partial Class Game
         'box7
         '
         Me.box7.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.box7.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.box7.Font = New System.Drawing.Font("Segoe UI", 30.0!)
         Me.box7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.box7.Location = New System.Drawing.Point(19, 177)
@@ -126,6 +133,7 @@ Partial Class Game
         'box8
         '
         Me.box8.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.box8.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.box8.Font = New System.Drawing.Font("Segoe UI", 30.0!)
         Me.box8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.box8.Location = New System.Drawing.Point(136, 177)
@@ -137,6 +145,7 @@ Partial Class Game
         'box9
         '
         Me.box9.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.box9.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.box9.Font = New System.Drawing.Font("Segoe UI", 30.0!)
         Me.box9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.box9.Location = New System.Drawing.Point(255, 177)
@@ -144,14 +153,6 @@ Partial Class Game
         Me.box9.Size = New System.Drawing.Size(100, 75)
         Me.box9.TabIndex = 9
         Me.box9.UseVisualStyleBackColor = False
-        '
-        'playerTurnLabel
-        '
-        Me.playerTurnLabel.AutoSize = True
-        Me.playerTurnLabel.Location = New System.Drawing.Point(159, 298)
-        Me.playerTurnLabel.Name = "playerTurnLabel"
-        Me.playerTurnLabel.Size = New System.Drawing.Size(0, 13)
-        Me.playerTurnLabel.TabIndex = 10
         '
         'Panel1
         '
@@ -172,6 +173,7 @@ Partial Class Game
         '
         Me.Button9.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Button9.FlatAppearance.BorderSize = 0
+        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button9.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(193, Byte), Integer))
         Me.Button9.Location = New System.Drawing.Point(220, 264)
@@ -184,6 +186,7 @@ Partial Class Game
         '
         Me.Button8.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Button8.FlatAppearance.BorderSize = 0
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button8.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(193, Byte), Integer))
         Me.Button8.Location = New System.Drawing.Point(15, 264)
@@ -196,6 +199,7 @@ Partial Class Game
         '
         Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Button7.FlatAppearance.BorderSize = 0
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button7.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(193, Byte), Integer))
         Me.Button7.Location = New System.Drawing.Point(220, 188)
@@ -208,6 +212,7 @@ Partial Class Game
         '
         Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Button4.FlatAppearance.BorderSize = 0
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(193, Byte), Integer))
         Me.Button4.Location = New System.Drawing.Point(15, 188)
@@ -237,6 +242,7 @@ Partial Class Game
         Me.TextBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(171, Byte), Integer))
         Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox2.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox2.Enabled = False
         Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(131, Byte), Integer))
         Me.TextBox2.Location = New System.Drawing.Point(30, 401)
@@ -251,7 +257,8 @@ Partial Class Game
         '
         Me.Button10.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(169, Byte), Integer))
         Me.Button10.FlatAppearance.BorderSize = 0
-        Me.Button10.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(193, Byte), Integer))
         Me.Button10.Location = New System.Drawing.Point(256, 401)
         Me.Button10.Name = "Button10"
@@ -260,20 +267,11 @@ Partial Class Game
         Me.Button10.Text = "Next Question"
         Me.Button10.UseVisualStyleBackColor = False
         '
-        'messageTxt
-        '
-        Me.messageTxt.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.messageTxt.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(171, Byte), Integer))
-        Me.messageTxt.Location = New System.Drawing.Point(543, 26)
-        Me.messageTxt.Margin = New System.Windows.Forms.Padding(2)
-        Me.messageTxt.Name = "messageTxt"
-        Me.messageTxt.Size = New System.Drawing.Size(374, 65)
-        Me.messageTxt.TabIndex = 14
-        '
         'Panel2
         '
         Me.Panel2.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(171, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.restartBtn)
         Me.Panel2.Controls.Add(Me.box1)
         Me.Panel2.Controls.Add(Me.box2)
         Me.Panel2.Controls.Add(Me.box3)
@@ -289,18 +287,46 @@ Partial Class Game
         Me.Panel2.Size = New System.Drawing.Size(374, 343)
         Me.Panel2.TabIndex = 15
         '
+        'restartBtn
+        '
+        Me.restartBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.restartBtn.FlatAppearance.BorderSize = 0
+        Me.restartBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.restartBtn.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.restartBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(193, Byte), Integer))
+        Me.restartBtn.Location = New System.Drawing.Point(19, 271)
+        Me.restartBtn.Name = "restartBtn"
+        Me.restartBtn.Size = New System.Drawing.Size(336, 57)
+        Me.restartBtn.TabIndex = 17
+        Me.restartBtn.Text = "Restart Game"
+        Me.restartBtn.UseVisualStyleBackColor = False
+        '
+        'messageTxt
+        '
+        Me.messageTxt.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(213, Byte), Integer), CType(CType(171, Byte), Integer))
+        Me.messageTxt.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.messageTxt.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.messageTxt.Enabled = False
+        Me.messageTxt.Font = New System.Drawing.Font("Segoe UI", 18.0!)
+        Me.messageTxt.ForeColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(131, Byte), Integer))
+        Me.messageTxt.Location = New System.Drawing.Point(543, 26)
+        Me.messageTxt.Multiline = True
+        Me.messageTxt.Name = "messageTxt"
+        Me.messageTxt.Size = New System.Drawing.Size(374, 65)
+        Me.messageTxt.TabIndex = 16
+        Me.messageTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'Game
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(229, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(193, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(984, 461)
-        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.messageTxt)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Button10)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.playerTurnLabel)
         Me.ForeColor = System.Drawing.Color.FromArgb(CType(CType(85, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(131, Byte), Integer))
         Me.MaximumSize = New System.Drawing.Size(1500, 700)
         Me.MinimumSize = New System.Drawing.Size(915, 469)
@@ -322,7 +348,6 @@ Partial Class Game
     Friend WithEvents box7 As Button
     Friend WithEvents box8 As Button
     Friend WithEvents box9 As Button
-    Friend WithEvents playerTurnLabel As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button9 As Button
     Friend WithEvents Button8 As Button
@@ -331,6 +356,7 @@ Partial Class Game
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Button10 As Button
-    Friend WithEvents messageTxt As Panel
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents messageTxt As TextBox
+    Friend WithEvents restartBtn As Button
 End Class

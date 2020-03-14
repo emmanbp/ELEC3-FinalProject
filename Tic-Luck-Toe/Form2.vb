@@ -241,7 +241,5 @@ Public Class Form2
         randomChoices()
     End Sub
 
-    Private Sub box1_Click(sender As Object, e As EventArgs) Handles box1.Click
 
-    End Sub
 End Class
