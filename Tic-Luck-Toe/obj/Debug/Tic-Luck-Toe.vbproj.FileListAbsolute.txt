@@ -26,3 +26,5 @@ C:\Users\G\source\repos\Tick-Luck-Toe\Tic-Luck-Toe\obj\Debug\Tic-Luck-Toe.vbproj
 C:\Users\G\source\repos\Tick-Luck-Toe\Tic-Luck-Toe\obj\Debug\Tic-Luck-Toe.exe
 C:\Users\G\source\repos\Tick-Luck-Toe\Tic-Luck-Toe\obj\Debug\Tic-Luck-Toe.xml
 C:\Users\G\source\repos\Tick-Luck-Toe\Tic-Luck-Toe\obj\Debug\Tic-Luck-Toe.pdb
+C:\Users\G\source\repos\Tick-Luck-Toe\Tic-Luck-Toe\obj\Debug\Tic_Luck_Toe.ConnectForm.resources
+C:\Users\G\source\repos\Tick-Luck-Toe\Tic-Luck-Toe\obj\Debug\Tic_Luck_Toe.Game.resources
